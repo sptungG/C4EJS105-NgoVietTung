@@ -67,6 +67,13 @@ switch (Number(n1)) {
 		turtle.right(360);
 	break;
 	case 7: 
+	alert("(12)Turtle 7 Polygon"); 
+	turtle.penColor = turtle.color.gray;
+	for(var i = 0; i < 7; i++){
+		turtle.forward(100);
+		turtle.left(360/7);
+	};
+	turtle.right(360);
 	break;
 	case 8:
 		alert("(12)Turtle 8"); 
