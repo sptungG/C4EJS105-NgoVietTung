@@ -11,7 +11,7 @@ var tPlane; // graphic plane for pen layer
 setup = function() {
 	var canvas = createCanvas(480, 360);
 	canvas.parent("p5Canvas");
-	background(200);
+	background(500);
 
 	turtleSprite = createSprite(0, 0, 56, 64);
 	turtleSprite.addAnimation("moving", "images/turtle_1.png", "images/turtle_4.png");
@@ -26,74 +26,15 @@ turtle = new Turtle();
 turtle.x = 130;
 turtle.y = 120;
 turtle.penDown = true;
-let n1 = prompt("Enter the number of Edges: ");
-switch (Number(n1)) {
-	case 1: break;
-	case 2: break;
-	case 3:
-		alert("(12)Turtle Triangle");
-		turtle.penColor = turtle.color.red;
-		for(var i = 0; i < 3; i++){
-			turtle.forward(100);
-			turtle.left(120);
-		};
-		turtle.right(360);
-		break;
-	case 4:
-	alert("(12)Turtle Square"); 
-	turtle.penColor = turtle.color.blue;
-	for(var i = 0; i < 4; i++){
-			turtle.forward(100);
-			turtle.left(90);
-	};
-	turtle.right(360);
-	break;
-	case 5:
-		alert("(12)Turtle Pentagon");
-		turtle.penColor = turtle.color.green;
-		for(var i = 0; i < 5; i++){
-			turtle.forward(100);
-			turtle.left(72);
-		};
-		turtle.right(360);
-	break;
-	case 6:
-		alert("(12)Turtle Hexagon"); 
-		turtle.penColor = turtle.color.yellow;
-		for(var i = 0; i < 6; i++){
-			turtle.forward(100);
-			turtle.left(60);
-		};
-		turtle.right(360);
-	break;
-	case 7: 
-	alert("(12)Turtle 7 Polygon"); 
-	turtle.penColor = turtle.color.gray;
-	for(var i = 0; i < 7; i++){
-		turtle.forward(100);
-		turtle.left(360/7);
-	};
-	turtle.right(360);
-	break;
-	case 8:
-		alert("(12)Turtle 8"); 
+let n = prompt("Enter the number of Edges: ");
+alert("Turtle "+n+" Polygon!");
 		turtle.penColor = turtle.color.aqua;
-		for(var i = 0; i < 8; i++){
-			turtle.forward(100);
-			turtle.left(45);
+		for(var i = 0; i < Number(n); i++){
+			const stepAngle = 180-(1-2/n)*180;
+			turtle.forward(80);
+			turtle.left(stepAngle);
 		};
 		turtle.right(360);
-	break;
-	default:
-		alert("(12)Turtle Circle");
-		turtle.penColor = turtle.color.magenta;
-		for(var i = 0; i < 999; i++){
-			turtle.forward(1.5);
-			turtle.left(1);
-		};		
-		turtle.right(360);
-		break;
-}
 	// End of turtle code ------------------------------------------------------------
 };
 
