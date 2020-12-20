@@ -115,11 +115,11 @@ const bmi = m/((h/100)*(h/100));
 alert("Your BMI is: "+bmi.toFixed(2));
 if(Number(bmi) < 16 ){
     alert(" You are Severely underweight.");
-}else if((Number(bmi) >= 16 )&&(Number(bmi) < 18.5 )){
+}else if(Number(bmi) < 18.5 ){
     alert(" You are Underweight.");
-}else if((Number(bmi) >= 18.5 )&&(Number(bmi) < 25 )){
+}else if(Number(bmi) < 25 ){
     alert(" You are Normal.");
-}else if((Number(bmi) >= 25 )&&(Number(bmi) < 35 )){
+}else if(Number(bmi) < 30 ){
     alert(" You are Overweight.");
 }else{
     alert("You are Obese");
