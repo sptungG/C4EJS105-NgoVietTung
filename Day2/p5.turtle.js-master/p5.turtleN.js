@@ -23,15 +23,18 @@ setup = function() {
 	
 //alert("(11a)Turtle Square"); 
 turtle = new Turtle();
-turtle.x = 130;
+turtle.x = 10;
 turtle.y = 120;
 turtle.penDown = true;
 let n8 = prompt("Enter the number of Polygons: ");
 alert(n8+" Turtle Polygons!");
-		turtle.penColor = turtle.color.blue;
 		let n = 3;
 		do{
 		for(var i = 0; i < Number(n); i++){
+			for (let i1 = 0; i1 < n; i1++) {
+				if(i1 % 2 == 0) turtle.penColor = turtle.color.blue;
+				else turtle.penColor = turtle.color.red;
+			}
 			const stepAngle = 180-(1-2/n)*180;
 			turtle.forward(100);
 			turtle.left(stepAngle);
