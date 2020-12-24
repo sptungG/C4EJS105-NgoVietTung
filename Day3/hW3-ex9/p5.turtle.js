@@ -21,11 +21,11 @@ setup = function() {
 	
 	// Start turtle code - recode turtle moving. -------------------------------------
 	turtle = new Turtle();
-	turtle.x = 130;
-	turtle.y = 120;
+	turtle.x = 10;
+	turtle.y = 300;
 	turtle.penDown = true;
 	
-	let colors = ['red', 'gray', 'blue', 'black', 'aqua'];
+	let colors = ['red','magenta','blue','aqua','white','lightgray','gray', 'black', 'green','yellow'];
 	let numShapes = colors.length;
 	let maxLength = 100;
 	for(let i = 0; i < numShapes; i++){
@@ -34,7 +34,7 @@ setup = function() {
 			turtle.left(90);
 			turtle.forward(maxLength);
 		}
-		maxLength *= 1.25;
+		maxLength *= 1.1;
 	}
 // End of turtle code ------------------------------------------------------------
 };
