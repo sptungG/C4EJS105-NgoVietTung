@@ -8,14 +8,22 @@ movieTitle.push(newMovie);
 console.log(movieTitle + "\n");
 //Read
 let i = prompt("Enter your Movie's position: ");
-console.log(movieTitle[i] + "\n");
+if(i < movieTitle.length) console.log(movieTitle[i] + "\n");
+else { alert(`${i} has not Supported yet.`);
+    break;
+}
 //Update
 {
 movieTitle[1] = prompt("Enter your first favorite Movie, you wanna change: ");
 console.log(movieTitle + "\n");
 let i = Number(prompt("Enter your position of Movie, you choose for changing: "));
-movieTitle[i] = prompt("Enter your "+i+"***** Movie: ");
-console.log(movieTitle + "\n");
+if(i < movieTitle.length){ 
+     movieTitle[i] = prompt("Enter your "+i+"***** Movie: ");
+     console.log(movieTitle + "\n");
+    }else{
+     alert(`${i} has not Supported yet.`);
+     break;
+    }
 }
 //Delete
 {
@@ -106,7 +114,7 @@ alert("Bravo, you are correct!");
     alert(`${arrNum} \n =>Even: ${evenArr} \n =>Odd: ${oddArr}`);
 //c
     {
-        for(i=0;i<n;i++) {
+        for(i = 0; i < n; i++) {
             if (oddArr[i] == oddArr[i+1]) {
                 oddArr.splice(i, 1);
             }
