@@ -69,45 +69,51 @@ alert("Bravo, you are correct!");
 
 //Additional
 {
-let arr = [];
-arr = prompt("Enter your Number array, separated by ( , ): ");
-let arrNum = arr.split(",");
-let n = arrNum.length;
-alert("Your array: "+arr);
-//1
-let arr1 = [];
-let tmp;
-for (let i = 0; i < n-1; i++) {
-    for(let j = i + 1; j < n; j++){
-    if(arr[i] > arr[j]){
-        tmp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = tmp;
+    let n = Number(prompt("Enter the number or array:"));
+    let arrNum = [];
+    for (i = 0; i < n; i++) {
+        let x = Number(prompt(`Enter #[${i + 1}]`));
+        arrNum.push(x);
     }
-}
-}
-for(let i1 = 0; i1 < n; i1++){ 
-        arr1[i1] = arr[i1]; 
-     }
-alert("Increasing Array: "+arr1);     
-//2
-let oddArr = [],evenArr = [];
-for (let i2 = 0; i2 < arrNum.length; i2++) {
-    let checkNum = Number(arrNum[i2]);
-     if(checkNum %2 != 0) oddArr.push(checkNum);
-     else evenArr.push(checkNum);
+    alert(arrNum+"\n");
+    //a
+    {
+        let i = 0;
+        while (i < n) {
+            if (arrNum[i] > arrNum[i + 1]) {
+                let t = arrNum[i];
+                arrNum.splice(i, 1);
+                arrNum.push(t);
+                i = 0;
+            } else {
+                i++;
+            }
+        }
     }
-alert(`${arrNum} \n => Odd: ${oddArr} \n => Even: ${evenArr}`);
-//3
-// function check(array){
-// for (let i3 = 0; i3 < array.length - 1; i3++) {
-//          if(array[i3] != NULL){
-// 			for(let j3 = i3 + 1; j3 < array.length ; j3++){
-// 				if(array[i3] == array[j3])	array[j3] = NULL;
-//                 }
-//             }
-// }
-// }
-// let checkArr = check(arrNum);
-// alert(`Odd: ${arrNum} \n => ${checkArr}`);
+    alert(` =>Increasing Array: ${arrNum}`);
+    //b
+    let evenArr = [];
+    let oddArr = [];
+    {
+        for (i = 0; i < n; i++) {
+            if (arrNum[i] % 2 == 0) {
+                evenArr.push(arrNum[i]);
+            } else {
+                oddArr.push(arrNum[i]);
+            }
+        }
+    }
+    alert(`${arrNum} \n =>Even: ${evenArr} \n =>Odd: ${oddArr}`);
+//c
+    {
+        for(i=0;i<n;i++) {
+            if (oddArr[i] == oddArr[i+1]) {
+                oddArr.splice(i, 1);
+            }
+            if (evenArr[i] == evenArr[i+1]) {
+                evenArr.splice(i, 1);
+            }
+        }
+    }
+    alert(`Delete the duplicate: \n =>Even: ${evenArr} \n =>Odd: ${oddArr}`);
 }
