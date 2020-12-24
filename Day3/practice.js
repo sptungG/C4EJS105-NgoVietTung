@@ -18,7 +18,7 @@ movieTitle[1] = prompt("Enter your first favorite Movie, you wanna change: ");
 console.log(movieTitle + "\n");
 let i = Number(prompt("Enter your position of Movie, you choose for changing: "));
 if(i < movieTitle.length){ 
-     movieTitle[i] = prompt("Enter your "+i+"***** Movie: ");
+     movieTitle[i-1] = prompt(`Enter your ${i} ***** Movie: `);
      console.log(movieTitle + "\n");
     }else{
      alert(`${i} has not Supported yet.`);
@@ -37,6 +37,10 @@ console.log(movieTitle + "\n");
 }
 
 //Read All
+/*
+for(let Item in movieTitle) console.log(movieTitle[Item]);
+for(let Item of movieTitle) console.log(movieTitle[Item]);
+*/
 for (let i1 = 0; i1 <= movieTitle.length; i1++) {
     console.log(movieTitle[i1]);
 }
@@ -84,7 +88,7 @@ alert("Bravo, you are correct!");
         arrNum.push(x);
     }
     alert(arrNum+"\n");
-    //a
+    //a tham khao Minh
     {
         let i = 0;
         while (i < n) {
