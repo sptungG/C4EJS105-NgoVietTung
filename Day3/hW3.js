@@ -119,14 +119,27 @@ function Search(arr, l, r, x)
 let index = Search(arrNum, 0, arrNum.length, numF);
 if(index != -1) alert(`${numF} is at ${index}th in array.`);
 else alert(`${numF} is Not in array.`);
+
+// let isFound = false;
+// for(let i = 0;i < arrNum.length;i++){
+//     if(numF == arrNum[i]){
+//         alert(`${numF} is Found in array at index ${i+1}`);
+//         isFound = true;
+//         break;
+//     }
+// }
+// if(!isFound){
+//     alert(`${numF} is not Found`);
+// }
 }
 
 //8 SHEEP 
 {
 //8.1    
-let flockSize = [];
-flockSize = prompt("Enter my flock size, separated by ( , ): ");
-let flockSize1 = flockSize.split(",");
+// let flockSize = [];
+// flockSize = prompt("Enter my flock size, separated by ( , ): ");
+// let flockSize1 = flockSize.split(",");
+const flockSize1 = [5,7,300,90,24,50,75];
     console.log(`Here is my sheep sizes:\n ${flockSize1}`);
 //8.2
     let maxSize = Math.max(...flockSize1); 
