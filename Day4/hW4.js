@@ -237,3 +237,32 @@ let tasks = [{
         }
     }
 }
+//7 TURTLE
+//8
+//9
+//10
+//11
+//12
+
+//16
+/*
+There are at least two ways to delete a property-value pair from an object,
+ the first one is the one you learned in class, to use delete keyword (which you already learned)..
+ The second one is to create a new object without the property-value pair and just use the new object from then
+*/
+const oldData = {
+    firedRice: {
+        Price: 30,
+        vnName: 'Com rang dua bo'
+    },
+    noddle: {
+        price: 20,
+        vnName: 'My tom chanh'
+    },
+    pho: {
+        price: 35,
+        vnName: 'Pho bo tai chin'
+    },
+    };
+    
+    

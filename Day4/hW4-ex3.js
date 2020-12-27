@@ -932,8 +932,8 @@ const jobSearch = {
 console.log("------------ex3-------------\n");
 console.log(jobSearch);
 
-//3.1: What is the data type of the outermost layer (Number, String, Object, Array or else)
-// -> ARRAY
+//3.1: What is the data type of the OUTERMOST layer (Number, String, Object, Array or else)
+// -> OBJECT
 //3.2: The hits property is where the job results are stored, is it a Number, String, Array, Object or something else?
 //  -> ARRAY
 //3.3: In each hit of hits, how to find the job’s title, locations, salary, benefits, skills and requirements
@@ -950,3 +950,5 @@ console.log("Requirements: "+ jobSearch.hits[i].jobRequirement);
 //     console.log(jobSearch[items]);
 // }
 // Map array without .map() let jobtitle = Array.from(jobSearch.hits, ({jobTitle}) => jobTitle);
+
+//15
