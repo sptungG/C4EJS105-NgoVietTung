@@ -268,7 +268,13 @@ let oldData = {
     },
     };
 
+// console.log(oldData);
+// delete oldData.noddle;
+// console.log(oldData);
+
+// Nguyen Minh Tuan
 console.log(oldData);
-delete oldData.noddle;
-console.log(oldData);
+let toDelete = "noddle";
+let {[toDelete]: deletedObj, ...newData} = oldData;
+console.log(newData);
 }
