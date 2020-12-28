@@ -929,34 +929,35 @@ const jobData = {
         }
     ]
 }
+console.log("\n\t\t15=========================15===========================\n");
 //15.1
-console.log("Get all the job hits:");
+console.log("15.1\n\t\tGet all the job hits:");
 console.log(jobData.hits);
 //15.2
-console.log("Get the First job hit: ");
+console.log("15.2\n\t\tGet the First job hit:");
 console.log(jobData.hits[0]);
 //15.3
-console.log("Get jobTitle of the First job");
+console.log("15.3\n\t\tGet jobTitle of the First job");
 console.log(jobData.hits[0].jobTitle);
 //15.4
-console.log("Get the Benefits of the First job hit:");
+console.log("15.4\n\t\tGet the Benefits of the First job hit:");
 console.log(jobData.hits[0].benefits);
 //15.5
-console.log("Log out First job hit Benefit values:");
+console.log("15.5\n\t\tLog out First job hit Benefit values:");
 {
     for (let i = 0; i < jobData.hits[0].benefits.length; i++) {
-        console.log(`-- ${jobData.hits[0].benefits[i].benefitValue}`);
+        console.log(`\t-- ${jobData.hits[0].benefits[i].benefitValue}`);
     }
 }
 //15.6
 {
-    console.log("Log out jobTitle and benefitValue of all job hits:");
+    console.log("15.6\n\t\tLog out jobTitle and benefitValue of all job hits:");
     for (let i = 0; i < jobData.hits.length; i++) {
         console.log(jobData.hits[i].jobTitle);
         console.log('Benefits:');
         {
             for (let j = 0; j < jobData.hits[i].benefits.length; j++) {
-                console.log(`-- ${jobData.hits[i].benefits[j].benefitValue}`);
+                console.log(`\t-- ${jobData.hits[i].benefits[j].benefitValue}`);
             }
         }
         console.log('-----------------------------\n');
@@ -964,26 +965,26 @@ console.log("Log out First job hit Benefit values:");
 }
 //15.7
 {
-    console.log("Log out jobTitle, locations, skills, jobSalary of all job hits:");
+    console.log("15.7\n\t\tLog out jobTitle, locations, skills, jobSalary of all job hits:");
     for (let i = 0; i < jobData.hits.length; i++) {
         console.log(jobData.hits[i].jobTitle);
-        console.log(`Salary: $${jobData.hits[i].jobSalary}`);
+        console.log(`Salary: ${jobData.hits[i].jobSalary}$$$`);
         console.log('Locations:');
         {
             for (let j = 0; j < jobData.hits[i].locationVIs.length; j++) {
-                console.log(`- ${jobData.hits[i].locationVIs[j]}`);
+                console.log(`\t- ${jobData.hits[i].locationVIs[j]}`);
             }
         }
         console.log('Benefits:');
         {
-            for (let j = 0; j<jobData.hits[i].benefits.length;i++) {
-                console.log(`- ${jobData.hits[i].benefits[j].benefitValue}`);
+            for (let j = 0; j < jobData.hits[i].benefits.length; j++) {
+                console.log(`\t- ${jobData.hits[i].benefits[j].benefitValue}`);
             }
         }
         console.log('Skills:');
         {
             for (let j = 0; j < jobData.hits[i].skills.length; j++) {
-                console.log(`- ${jobData.hits[i].skills[j]}`);
+                console.log(`\t- ${jobData.hits[i].skills[j]}`);
             }
         }
         console.log('-----------------------------');

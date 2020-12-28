@@ -929,7 +929,7 @@ const jobSearch = {
             }
         ]
 };
-console.log("------------ex3-------------\n");
+console.log("\n\t\t3=========================3===========================\n");
 console.log(jobSearch);
 
 //3.1: What is the data type of the OUTERMOST layer (Number, String, Object, Array or else)
@@ -949,6 +949,6 @@ console.log("Requirements: "+ jobSearch.hits[i].jobRequirement);
 //     console.log("-------------------------\n");
 //     console.log(jobSearch[items]);
 // }
-// Map array without .map() let jobtitle = Array.from(jobSearch.hits, ({jobTitle}) => jobTitle);
 
+// Map array without .map() let jobtitle = Array.from(jobSearch.hits, ({jobTitle}) => jobTitle);
 //15
