@@ -1,0 +1,39 @@
+pi{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    
+}
+.p-1{
+    color: red;
+}
+
+
+.div-2{
+    background-color: #00ff00;
+}
+
+.font-side-24{
+    font-size: 12px;
+}
+.div-4{
+    font-size: 3em;
+    background: wheat
+  }
+
+
+#div2{
+    color:blue;
+}
+
+
+ul li{
+    font-weight: bold;
+} 
+
+
+div.item >span{
+    font-size: 18;
+}
+div.item div span{
+    font-style: italic;
+}

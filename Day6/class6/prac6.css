@@ -1,0 +1,78 @@
+/*
+Selector: -tag p,..
+          -id
+          -class
+ko qua thẻ style nữa, -> tạo các vùng chọn
+*/
+
+/*
+Nhúng CSS
+- inline style: nhúng trực tiếp
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <title>Inline Styles</title>
+    
+    <style type="text/css">
+       p {
+        color: blue;
+        font-family: Arial;
+       }
+    </style>
+  </head>
+
+  <body>
+    <p>Đây là một đoạn chữ đã được định dạng với CSS</p>.
+  </body>
+</html>
+- external style: thông qua 1 tập tin .css riêng
+ name.css: 
+  p {
+    color: blue;
+    font-family: Arial;
+  } 
+ html:  <link rel="stylesheet" href="name.css" />
+ 
+*/
+/*
+Nhúng tập tin CSS vào bên trong một tập tin CSS
+  Ví dụ bạn có thể nhúng một tập tin demo.css 
+  vào trong tập tin style.css bằng cách chèn đoạn này vào tập tin style.css:
+                    @import "demo.css";
+*/
+
+
+/*
+Vùng chọn trong CSS
+-tab:
+   h,p,..
+-id:
+ *cách đặt tên: post-title
+ 
+   <h1 id="post-title">Tiêu đề có thiết lập ID</h1>
+   <h1>Tiêu đề thông thường</h1>
+   *dấu thăng # trc id để phân biệt
+   #post-title {
+        color: blue;
+   }
+   *cách viết khác h1#post-title
+-class:
+  <h1 class="sticky sticky1">Tiêu đề quan trọng</h1>
+  <h1>Tiêu đề thông thường</h1>
+  <h1 class="sticky">Tiêu đề quan trọng</h1>
+
+  *1 class dùng cho nhiều phần tử
+  * thêm dấu chấm . 
+  .sticky {
+     color: red;
+    }
+  h1.sticky{
+
+   }
+  h1.sticky1{
+
+   }
+   2 class sẽ phủ định thuộc tính đã có lấy thuộc tính cuối 
+*/
+
