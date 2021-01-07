@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: brown;
+}
+/* màu chữ thay đỏi khi chạm vào */
+a:hover, a:hover p{
+    color: #adad90;
+}
+p{
+    font-size: 18px;
+}
+.container{
+    width: 1200px;
+    margin: auto;
+}
+/* MENU */
+.menu{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.menu img{
+    margin: 0px 15px -20px;
+}
+.menu img:hover{
+ opacity: 0;
+}
+
+.menu ul li{
+display: inline-block;
+padding: 10px 20px;
+text-transform: uppercase;
+}
+/* Slice */
+.slice{
+    margin-top: 30px;
+    /* lấy slice làm mốc đặt position sao cho ảnh vào trong*/
+    position: relative;
+}
+.slice .left{
+    width: 400px;
+    position: absolute;
+    left: 75px;
+    top: 195px;
+}
+.slice .left h2{
+    font-size: 80px;
+    color: chocolate;
+    text-shadow: 5px 2px 4px burlywood;
+}
+.left p{
+    margin-top: 20px;
+}
+.btn{
+    /* đặt cho khoảng cách  */
+    padding: 15px 55px;
+    background-color: #758dba;
+    border-radius: 30px;
+    color: antiquewhite;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+}
+.btn:hover{
+    background-color: #404246;
+}
+.slice .right{
+    position: absolute;
+    bottom: 100px;
+    right: 78px;
+}
+.hidden{
+    background-color: rgb(0, 0, 0, 0);
+    color: aliceblue;
+    margin-right: 50px;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+}
+.hidden:hover{
+    color: #46484b;
+}
+/* BANNER */
+.banner{
+    margin-top: 20px;
+}
+.bannerLeft{
+    width: 680px;
+    height: 590px;
+    margin-right: 20px;
+    float: left;
+    background-image: url("../myWed/images/mtp3.jpg");
+    background-size: cover;
+    position: relative;
+}
+.bannerRight{
+    width: 500px;
+    height: 700px;
+    float: left;
+    background-image: url("../myWed/images/mtp5.jpg");
+    background-size: cover;
+    position: relative;
+}
+.textL{
+    position:  absolute;
+    left: 440px;
+    bottom: 72px;
+    font-size: 60px;
+    color: coral;
+
+}
+.view1{
+    position:  absolute;
+    left: 440px;
+    bottom: 35px;
+    text-transform: uppercase;
+}
+.textR{
+    position:  absolute;
+    left: 20px;
+    bottom: 340px;
+    font-size: 60px;
+    color: coral;
+
+}
+.view2{
+    position:  absolute;
+    left: 20px;
+    bottom: 288px;
+    text-transform: uppercase;
+}
+/* CONTENTS */
+.title{
+    margin-bottom: 20px;
+    font-size: 50px; 
+}
+.sp ,.ten,.gia,.mua{
+    width: 285px;
+    margin-left: 20px;
+    float: left;
+    overflow: hidden;
+}
+.sp:first-child, .ten:first-child, .gia:first-child,.mua:first-child{
+    margin-left: 0;
+}
+.sp img{
+  transform: scale(1.5);
+}
+.sp img:hover{
+    transform: scale(1.0);
+}
+.ten p{
+    color: #46484b;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.gia{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color:chocolate;
+    margin-bottom: 20px;
+}
+.gia span{
+    font-size: 17px;
+}
+.mua {
+    text-align: center;
+}
+/* BANNER */
+.banner1{
+    width: 680px;
+    height: 350px;
+    margin-right: 20px;
+    float: left;
+    position: relative;
+    background-image: url("../myWed/images/Instagram_\ sontungmtp\ 💘.jfif");
+    background-repeat: no-repeat;
+    margin-top: 30px;
+}
+.banner2{
+    width: 500px;
+    height: 570px;
+    float: left;
+    background-image: url("../myWed/images/mtp2.jfif");
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 30px;
+}
+.textL2{
+    position:  absolute;
+    left: 495px;
+    bottom: 89px;
+    font-size: 60px;
+    color: coral;
+
+}
+.view3{
+    position:  absolute;
+    left: 495px;
+    bottom: 50px;
+    color:#000000;
+    text-transform: uppercase;
+}
+.textR2{
+    position:  absolute;
+    left: 265px;
+    bottom: 396px;
+    font-size: 60px;
+    color: coral;
+
+}
+.view4{
+    position:  absolute;
+    color:#000000;
+    left: 265px;
+    bottom: 368px;
+    text-transform: uppercase;
+}
+
+/* FOOTER */
+.about{
+    width: 400px;
+    float: left;
+}
+.about .left{
+    width: 70px;
+    height: 38px;
+    margin-right: 20px;
+    float: left;
+}
+.about .right{
+    width: 150px;
+    float: left;
+}
+.contact{
+    width: 300px;
+    float: left;
+}
+.link{
+    width: 500px;
+    float: left;
+}
