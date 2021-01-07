@@ -201,6 +201,7 @@ text-transform: uppercase;
     border-radius: 30px / 30px;
     position: relative;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 .textL2{
     position:  absolute;
@@ -256,4 +257,8 @@ text-transform: uppercase;
 .link{
     width: 500px;
     float: left;
+}
+
+hr{
+    margin-bottom: 20px;
 }
