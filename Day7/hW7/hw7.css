@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 1200px;
+    margin: auto;
+}
+/*  */
+.ans{
+    margin: 10px;
+}
+p{
+    margin: 10px;
+}
+li{
+    margin-left : 20px;
+    margin-top: 5px;
+}
+button:hover{
+    cursor: pointer;
+    background-color:hotpink;
+}
+#upper-button:hover{
+    cursor: pointer;
+    background-color: aqua;
+}
+h2{
+    margin: 10px 0px;
+}
+/* ex12 */
+.container12{
+    width: 300px;
+    margin-bottom: 100px;
+}
+.container12 button{
+    float:right;
+    margin-right: 88px;
+}
+.container12 #item-add:hover{
+    cursor: pointer;
+    background-color: gold;
+}
+.container12 .item-remove:hover{
+    cursor: pointer;
+    background-color:lightcoral;
+}
