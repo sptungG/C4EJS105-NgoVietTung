@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    padding: 50px 0px;
+    display: inline-flex;
+    width: 1200px;
+    margin: auto;
+}
+.container1{
+    height: 300px;
+    width: 300px;
+    margin: 0px 10px;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: darkgray;
+}
+.container1 input{
+    float:right;
+    margin-right: 170px;
+    padding: 1px;
+}
+.container1 .btn{
+    padding: 5px;
+    border-radius: 5px;
+}
+.container1 .btn:hover{
+    cursor: pointer;
+    background-color: gold;
+}
+p{
+    margin: 10px 0px;
+}
+/*  */
+#timer{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+}
