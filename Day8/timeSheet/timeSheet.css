@@ -1,0 +1,28 @@
+
+.time-sheet{
+    display: inline-flex;
+    width: 1200px;
+    margin: auto;
+}
+/*  */
+.pj-input{
+    padding: 0 20px;
+    margin: 0 30px;
+}
+/* .pj-input .btn{
+} */
+/*  */
+.table{
+  margin: 0px 50px;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 750px;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+  }

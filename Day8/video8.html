@@ -8,6 +8,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='Counter/vid8.css'>
     <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' type='text/css' media='screen' href='Quote/quote.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='timeSheet/timeSheet.css'>
 </head>
 <body>
 <div class="container">   
@@ -30,9 +31,30 @@
           </span></h3>
         <h4>--<span id="q-author">author</span></h4>
     </div>
-    <div class="time-sheet"></div>
     <div class="freaking-math"></div>
 </div>
+<div class="time-sheet">
+    <div class="pj-input">
+        <p>Title: <input type="text" placeholder="Enter project" class="new-pj"></p>
+        <p>Task: <input type="text" placeholder="Enter task" class="new-task"></p>
+        <p>Time: <input type="text" placeholder="Time spent" class="new-time"></p>
+    <div class="btn">  
+        <button id="new-pj-add">Add</button>
+        <button id="new-pj-clear">Clear</button>
+    </div>  
+    </div>
+    <table class="table">
+        <thead>
+           <th>Project</th>
+           <th>Task</th>
+           <th>Time spent</th>   
+           <th>Actions</th>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+    </table>
+</div>
+<script src='timeSheet/timeSheet.js'></script>
 <script src='Quote/quote.js'></script>
 <script src='Counter/vid8.js'></script>
 </body>
