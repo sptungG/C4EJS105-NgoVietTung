@@ -21,10 +21,11 @@ let timeSheetData = [{
     task: 'Learn git basics',
     timeSpent: '2'
 }];
-//
+//1 2 3 4 5 6 7
 function upDate() {
 for(let data of timeSheetData) {
     tableBody.insertAdjacentHTML('beforeend', `<tr><td>${data.project}</td><td>${data.task}</td><td>${data.timeSpent}</td><td><button class = "delete">X</button>\t<button class = "update">U</button></td><tr>`)}
 }
 upDate();
-//
+// 8
+
