@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+</head>
+<body>
+    <!-- Tham khao Vu Duc Nhat Minh -->
+    <input type="text" name="" id="insert_item" placeholder="Enter Item" oninput="searchItem(document.getElementById('insert_item').value)">
+    <button id="add_btn" onclick="addItem(document.getElementById('insert_item').value)">Add Item</button>
+    <button id="reload_btn" onclick="getAPI()">Reload</button>
+    <div>
+        <ul id="item-body" style="list-style-type: decimal;">
+        </ul>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
