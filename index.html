@@ -4,152 +4,177 @@
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 	<title>Demo</title>
-	<style>
-	    /*  ---------  插件外的样式  ----------  */
-		.wrap {
-			background-color: #eaeaea;
-			display: none;
-			margin:10px auto;
-		}
-		.wrap img {
-			cursor:pointer;
-		}
-		.control {
-			position: fixed;
-			z-index: 1;
-		}
-		button {
-			border: none;
-			background-color: #3498DB;
-			color:#FFF;
-			padding: 8px;
-			cursor: pointer;
-			border-radius: 8px;
-		}
-		button:focus {
-			outline: none;
-		}
-		button:hover {
-			background-color: #2F77B9;
-		}
-		.change-group {
-			position: fixed;
-			z-index: 1;
-		}
-		.change-group input {
-			border: 1px solid #3498DB;
-			background-color: #FFF;
-			margin-top: 10px;
-			color:#3498DB;
-			padding: 8px;
-			border-radius: 8px;
-		}
-		.change-group input:focus {
-			outline: none;
-		}
-		#loadingImg {
-			position: absolute;
-			top: 20px;
-			left:50%;
-		}
-	</style>
+	
+	<link rel="stylesheet" href="css/slide1.css">
 	<link rel="stylesheet" href="css/Pinterest.css">
+	<link rel="stylesheet" href="css/about-us.css">
+	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Lobster&display=swap" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<div class="control">
-	<button onclick="addImg();" id="add">增加一张图片</button>
-	<div class="change-group">
-		<input type="text" placeholder="输入删除图片的编号.." id="num">
-		<button onclick="DeleteImg()">删除</button><br>
-		<input type="text" placeholder="列数/[间距](PS:3 or 3/30).." id="line">
-		<button onclick="resetLine()">修改</button>
+	
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<div class="container-menu">
+	<div class="menu" align="center">
+        <ul>
+            <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+            <li><a href="#">VietNamese</a></li>
+			<li><a href="#">Chinese</a></li>
+			<li><a href="#">ThaiLand</a></li>
+			<a href="index.html"><img src="images/logo.jpg" alt=""></a>
+            <li><a href="randomdish.html">Hungry?</a></li>
+			<li><a href="#">About Us</a></li>
+			
+			<li><a href="#" style="float: right;">Sign in</a></li>
+			<li><a href="#" style="float: right;">Sign up</a></li>
+		</ul>
+		<hr width="100%" size="1px" align="center" />
 	</div>
+</div>
+<div class="slideshow-container">
+
+	<div class="mySlides fade">
+	  <img src="images/1.jpg">
+	  <img src="images/11.jpg">
+	  <img src="images/30.jpg">
+	  <img src="images/13.jpg">
+	</div>
+	
+	<div class="mySlides fade">
+		<img src="images/13.jpg">
+		<img src="images/15.jpg">
+		<img src="images/16.jpg">
+		<img src="images/17.jpg">
+	  </div>
+	
+	  <div class="mySlides fade">
+		<img src="images/14.jpg">
+		<img src="images/11.jpg">
+		<img src="images/17.jpg">
+		<img src="images/18.jpg">
+	  </div>
+	
+	  <div class="mySlides fade">
+		<img src="images/28.jpg">
+		<img src="images/21.jpg">
+		<img src="images/20.jpg">
+		<img src="images/23.jpg">
+	  </div>
+	
+	  <div class="mySlides fade">
+		<img src="images/11.jpg">
+		<img src="images/12.jpg">
+		<img src="images/17.jpg">
+		<img src="images/18.jpg">
+	  </div>
+	
+	  <div class="mySlides fade">
+		<img src="images/13.jpg">
+		<img src="images/5.jpg">
+		<img src="images/25.jpg">
+		<img src="images/27.jpeg">
+	  </div>
+</div>
+
+<div style="text-align:center" style="display: inline-flex;">
+	<span class="dot"></span>
+	<span class="dot"></span> 
+	<span class="dot"></span> 
+	<span class="dot"></span>
+	<span class="dot"></span>
+	<span class="dot"></span>
+	<span class="dot"></span>
+	<span class="dot"></span> 
+  </div>
+<script>
+	var slideIndex = 0;
+	showSlides();
+	
+	function showSlides() {
+	   var i;
+	   var slides = document.getElementsByClassName("mySlides");
+	   var dots = document.getElementsByClassName("dot");
+	   for (i = 0; i < slides.length; i++) {
+		 slides[i].style.display = "none";  
+	   }
+	   slideIndex++;
+	   if (slideIndex > slides.length) {slideIndex = 1}    
+	   for (i = 0; i < dots.length; i++) {
+		  dots[i].className = dots[i].className.replace(" active", "");
+	   }
+	   slides[slideIndex-1].style.display = "block";  
+	   dots[slideIndex-1].className += " active";
+	   setTimeout(showSlides, 4000); // Change image every 2 seconds
+	}
+	</script>
+<h2 align = "center" style="width: 75%; font-size: 30px;"> - Dish we offer - </h2>
+<div class="article-aside-flex">
+ <div class="container-blog" style="width: 75%;">
+	
+ <div class="dropup">
+ <div class="control">
+	<button onclick="myFunction()" class="dropbtn"><a>Display</a></button>
+	<div id="myDropUp" class="dropup-content">
+		<button onclick="addImg();" id="add" >See More Pic</button>
+		<div class="change-group">
+	     <input type="text" placeholder="#.the Deleted picture .." id="num">
+		        <button onclick="DeleteImg()">Delete</button><br>
+		 <input type="text" placeholder="#.Display inlines.." id="line">
+				<button onclick="resetLine()">Modify</button>
+		</div>
+	</div>
+ </div>
 </div>
 
 <img src="images/loading.gif" alt="loading" id="loadingImg">
 <div class="wrap">
-	<img src="images/1.jpg" alt="image" data-title="Picture·1" data-subtitle="2016/4/15" >
-	<img src="images/2.jpg" alt="image" data-title="Picture·2" data-subtitle="2016/4/15" >
-	<img src="images/3.jpg" alt="image" data-title="Picture·3" data-subtitle="2016/4/15" >
-	<img src="images/4.jpg" alt="image" data-title="Picture·4" data-subtitle="2016/4/15" >
-	<img src="images/5.jpg" alt="image" data-title="Picture·5" data-subtitle="2016/4/15" >
-	<img src="images/6.jpg" alt="image" data-title="Picture·6" data-subtitle="2016/4/15" >
-	<img src="images/7.jpg" alt="image" data-title="Picture·7" data-subtitle="2016/4/15" >
-	<img src="images/8.jpg" alt="image" data-title="Picture·8" data-subtitle="2016/4/15" >
+	<img src="https://cdn.cet.edu.vn/wp-content/uploads/2018/03/canh-ga-chien-nuoc-mam.jpg" alt="image" data-title="Gà chiên mắm" data-subtitle="...Đối với tôi, Gà chiên mắm là một món ăn gia đình thuần tuý đúng nghĩa: Dễ kiếm – Dễ làm – Rẻ – Ngon" >
+	<img src="https://scontent.fhan2-6.fna.fbcdn.net/v/t1.0-9/86188253_117280523170683_3167674501198512128_n.jpg?_nc_cat=104&ccb=2&_nc_sid=730e14&_nc_ohc=a7WlcBFCpwEAX-JDSms&_nc_ht=scontent.fhan2-6.fna&oh=ea639d9b672bbeced1c3102dc1e05b23&oe=60307542" alt="image" data-title="Sườn xào chua ngọt" data-subtitle="Món ăn tuổi thơ.." >
+	<img src="http://culinaryfrank.com/wp-content/uploads/2019/03/culinary-frank-fish-sauce-chicken-wings-11.jpg" alt="image" data-title="Gà chiên mắm, sốt mật ong" data-subtitle="..Sự kết hợp hài hòa của vị nước mắm, thêm vào mùi thơm của cháy tỏi, vị ngọt của đường" >
+	<img src="http://culinaryfrank.com/wp-content/uploads/2019/01/culinary-frank-Vietnamese-braised-pork-belly-with-eggs-1.jpg" alt="image" data-title="Thịt kho nước dừa" data-subtitle="...món Thịt Kho mà mẹ tôi thường nấu khi tôi còn nhỏ" >
+	<img src="https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/83225098_117280446504024_8909978959144288256_n.jpg?_nc_cat=110&ccb=2&_nc_sid=730e14&_nc_ohc=NhInqbP9TfsAX9Z0781&_nc_ht=scontent.fhan2-4.fna&oh=6440481b044d21975db1762fbd0b82c6&oe=6031BA3B" alt="image" data-title="Măng tây xào tỏi" data-subtitle="Chút vị lạ của măng tây." >
+	<img src="http://culinaryfrank.com/wp-content/uploads/2019/03/culinary-frank-buldak-8.jpg" alt="image" data-title="Gà Cay Phô Mai Hàn.Q (Buldak)" data-subtitle="Có hai cách để ăn món Buldak, thứ nhất..." >
+	<img src="http://culinaryfrank.com/wp-content/uploads/2018/08/culinary-frank-KFC-12-683x1024.jpg" alt="image" data-title="Gà Chiên Hàn Quốc" data-subtitle="2016/4/15" >
+	<img src="http://culinaryfrank.com/wp-content/uploads/2019/03/culinary-frank-rabokki-9-768x978.jpg" alt="image" data-title="Rabokki" data-subtitle="Rabokki, Ramyeon (라면)+Tteokbokki (떡볶이)." >
 </div>
+</div>
+<div style="width: 25%;">
+<aside>
+	<div class="about-aside">
+		<h2>About Us</h2>
+		<img src="images/kaylah-otto-491988-unsplash.jpg" alt="girl-in-kitchen">
+		<p><i>
+			Donec pede justo, fringilla vel, aliquet nec, 
+			vulputate eget, arcu. In enim justo, rhoncus ut, 
+			imperdiet a, venenatis vitae, justo. Nullam dictum 
+			felis eu pede mollis pretium. Integer tincidunt. 
+			Cras dapibus. Vivamus elementum semper nisi.
+			Aenean vulputate eleifend tellus.
+		</i>
+		</p>
+	</div>
+	<hr/>
+
+	<div class="aside-links">
+		<h2>Follow</h2>
+		<div>
+			<a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></i></a>
+		</div>
+	</div>
+	<hr/>
+</aside>
+</div>
+</div>
+
+
+<script src="js/main.js"></script>
 <script src="js/jquery-1.12.0.min.js"></script>
 <script src="js/Pinterest.js"></script>
-<script>
-//加载插件
-$(window).load(function(){
-	$('#loadingImg').remove();
-	$('.wrap').show();
-	$('.wrap').pinterest({
-		line: 4,
-		gap: 15,
-		responsive: [{
-			maxWidth: 1244,
-			minWidth: 769,
-			line: 3,
-			gap: 10
-		},{
-			maxWidth: 768,
-			line: 2,
-			gap: 20
-		},{
-			maxWidth: 400,
-			line: 1,
-			gap: 25
-		}]
-	});
-});
+<script src="js/plugin.js"></script>
 
-//获取初始图片长度
-var current_count = $('.wrap img').length;
-
-//添加图片
-function addImg(){
-	++current_count;
-	if(current_count > 52){
-		alert("图库已经空了Q~Q");
-	}
-	else {
-		$('.wrap').pinterest('add', 'images/' + current_count + '.jpg', "Picture·" + current_count, "2016/4/15");
-	}
-	scrollBottom(3);
-}
-
-//滚到底部
-function scrollBottom( speed ){
-	var ScrollTop = $(document).scrollTop();
-	var top = ScrollTop + speed;
-	$(document).scrollTop(top);
-	if(top < ($(document).height() - $(window).height())) {
-		setTimeout(function(){scrollBottom(speed);},0);
-	}
-}
-//删除图片
-function DeleteImg() {
-	var num = $('#num').val();
-	$('.wrap').pinterest('remove', num);
-}
-
-//修改瀑布流列数
-function resetLine(){
-	var value = $('#line').val();
-	if(value.indexOf('/') > -1){
-		console.log(value);
-		var line = value.split('/')[0];
-		var gap = value.split('/')[1];
-		$('.wrap').pinterest('reset', {
-			line: line,
-			gap: gap
-		});
-	}
-	else {
-		$('.wrap').pinterest('reset', value);
-	}
-}
-</script>
 </body>
 </html>

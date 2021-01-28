@@ -1,10 +1,10 @@
 ;
 (function(w, d, $, undefined) {
 	/**
-	 * 拖拽图片状态
-	 * flag 可拖拽标志
-	 * startX, startY 拖拽起点
-	 * left, top 拖拽位置
+	 * Drag image status 
+	 * flag Draggable logo 
+	 * startX, startY Drag the starting point 
+	 * left, top Drag position 
 	 */
 	var ImgStatus = {
 		flag: false,
@@ -14,7 +14,7 @@
 		top: 0
 	}
 
-	/* ******************* 瀑布流构造函数 ********************* */
+	/* ******************* Waterfall constructor  ********************* */
 	var Pinterest = function(elem, config) {
 		this.$elem = elem;
 		this.$imgs = this.$elem.find('img');
@@ -24,17 +24,17 @@
 		this.responsive = config.responsive ? config.responsive : [];
 		this.setState();
 
-		//为实例绑定事件
+		//Bind events to instances 
 		this.onEvent();
 	}
 
 	Pinterest.prototype = {
 		/**
-		 * 设置瀑布流基础属性
+		 * Set basic properties of waterfall 
 		 */
 		setState: function() {
 			var len = this.responsive.length;
-			//判断是否设置响应式
+			//Determine whether to set up responsive 
 			if (len > 0) {
 				var WINDOW_WIDTH = $(w).width();
 				for (var i = len - 1; i >= 0; i--) {
@@ -52,7 +52,7 @@
 			this.width = this.config.width ? this.config.width : this.getWidth();
 		},
 		/**
-		 * 得到每列瀑布流的宽度
+		 * Get the width of each column of waterfall 
 		 * @return {number} [default: 200]
 		 */
 		getWidth: function() {
@@ -61,7 +61,7 @@
 			return width ? Math.floor((width - (this.gap * index)) / this.line) : 200;
 		},
 		/**
-		 * 设置每列瀑布流的宽度
+		 * Set the width of each column of waterfall 
 		 * @param {number} width [require]
 		 */
 		setWidth: function(width) {
@@ -71,8 +71,8 @@
 			});
 		},
 		/**
-		 * 得到当前最短的瀑布流
-		 * @return {number} [瀑布流序号]
+		 * Get the current shortest waterfall flow 
+		 * @return {number} [Waterfall number]
 		 */
 		getMinStreams: function() {
 			var that = this;
@@ -88,21 +88,21 @@
 			return index;
 		},
 		/**
-		 * 插件绑定事件
+		 * Plug-in binding event 
 		 */
 		onEvent: function() {
-			//图片全屏显示
+			//Picture in full screen 
 			this.$elem.on('click', 'img', this.fullScreen);
-			//显示完整图片
+			//Show full picture 
 			$(d).on('click', '.priterest-full-img', this.fullImg);
-			//完整图片缩小
+			//Full image zoom out 
 			$(d).on('click', '.priterest-shrink-btn', this.shrinkImg);
-			//完整图片拖动
+			//Full picture drag 
 			$(d).on('mousedown', '.priterest-big-img', this.dragImg);
 			$(d).on('mousemove', '.priterest-big-img', this.moveImg);
 			$(d).on('mouseup', '.priterest-big-img', this.dropImg);
 			$(d).on('mouseout', this.dropImg);
-			//跟随浏览器瀑布流缩放
+			//Follow the browser waterfall to zoom 
 			$(w).resize(function() {
 				this.setState();
 				this.width = this.getWidth();
@@ -111,7 +111,7 @@
 			}.bind(this));
 		},
 		/**
-		 * 设置图片下方标题
+		 * Set the title below the picture 
 		 * @param { dom } img
 		 */
 		setTitle: function(img) {
@@ -130,7 +130,7 @@
 				$img_title.insertAfter($(__this));
 			}
 		},
-		/* ******************* 瀑布流初始化 ********************* */
+		/* ******************* Waterfall initialization ********************* */
 		init: function() {
 			var that = this;
 			that.$elem.children().remove();
@@ -143,18 +143,18 @@
 			that.$imgs.css('width', '100%');
 
 			$.each(that.$imgs, function(i, v) {
-				var index = that.getMinStreams(); //得到当前最短的瀑布流
+				var index = that.getMinStreams(); //Get the current shortest waterfall flow
 				that.$imgs.eq(i).appendTo(that.streams[index]);
 			});
 
-			//图片下方显示标题( 遍历单个绑定 - 方便添加新图时片绑定 )
+			//The title is displayed below the picture (traversing a single binding-it is convenient to add a new picture when the slice is bound) 
 			that.$imgs.each(function(i, v) {
 				that.setTitle(v);
 			});
 		},
 		/**
-		 * 为瀑布流添加图片
-		 * @param { Array[ src, {title}, {subtitle} ] } parameter     [ src: 图片路径 | title: 主标题 | subtitle: 副标题 ]
+		 * Add pictures to the waterfall 
+		 * @param { Array[ src, {title}, {subtitle} ] } parameter     [ src: Picture path|title: Main title|subtitle: subtitle]
 		 */
 		add: function(parameter) {
 			var $img = $("<img src=" + parameter[0] + " style='width: 100%;'/>");
@@ -170,8 +170,8 @@
 			this.setTitle($img[0]);
 		},
 		/**
-		 * 移除图片
-		 * @param { int } index 图片序号
+		 * Remove picture 
+		 * @param { int } index Picture number 
 		 */
 		remove: function(index) {
 			index = parseInt(index);
@@ -183,7 +183,7 @@
 			this.$imgs.eq(i - 1).parent().remove();
 		},
 		/**
-		 * 重设瀑布流数目
+		 * Reset the number of waterfalls 
 		 * @param  {[ number or string or object ]} param
 		 */
 		resetLine: function(param) {
@@ -199,14 +199,14 @@
 			this.init();
 		},
 		/**
-		 * 全屏显示图片
+		 * Show picture in full screen 
 		 */
 		fullScreen: function() {
 			var $wrap = $("<div class='priterest-wrap'></div>");
 			var $fade = $("<div class='priterest-fade'></div>");
 			var $full_img = $("<img src=" + this.src + " class='priterest-full-img priterest-off'/>");
 
-			//遮罩层点击事件
+			//Mask layer click event 
 			$fade.click(function() {
 				$wrap.remove();
 			});
@@ -215,7 +215,7 @@
 			$wrap.append($full_img);
 			$wrap.appendTo('body');
 
-			//当全屏图片小于等于完整图片时, 放大无效
+			//When the full screen picture is less than or equal to the full picture, the zoom is invalid 
 			if ($full_img[0].naturalWidth <= $full_img.width()) {
 				$full_img.css('cursor', 'default');
 			} else {
@@ -225,13 +225,13 @@
 				$wrap.append($shrink_btn);
 			}
 
-			//将全屏图片出现效果交付给CSS样式, 方便插件使用者自定义
+			//Deliver the full-screen image appearance effect to CSS style, which is convenient for plug-in users to customize 
 			setTimeout(function() {
 				$full_img.removeClass('priterest-off');
 			}, 0);
 		},
 		/**
-		 * 显示完整图片
+		 * Show full picture 
 		 */
 		fullImg: function() {
 			if (!$(this).hasClass('priterest-big-img') && this.width < this.naturalWidth) {
@@ -240,7 +240,7 @@
 			}
 		},
 		/**
-		 * 缩小完整图片
+		 * Zoom out the full picture 
 		 */
 		shrinkImg: function() {
 			$('.priterest-full-img').css({
@@ -251,7 +251,7 @@
 			$(this).hide();
 		},
 		/**
-		 * 设置图片初始状态
+		 * Set the initial state of the picture 
 		 */
 		dragImg: function(event) {
 			event.preventDefault();
@@ -264,7 +264,7 @@
 			ImgStatus.top = parseInt(w.getComputedStyle(this, null)['top']);
 		},
 		/**
-		 * 拖拽图片位置改变
+		 * Drag the picture to change the position 
 		 */
 		moveImg: function(event) {
 			if (ImgStatus.flag) {
@@ -273,7 +273,7 @@
 			}
 		},
 		/**
-		 * 拖拽结束
+		 * Drag to end 
 		 */
 		dropImg: function() {
 			ImgStatus.flag = false;
@@ -281,7 +281,7 @@
 		}
 	};
 	/**
-	 * @return { string } [ 根据浏览器修改cursor属性 ]
+	 * @return { string } [ Modify the cursor properties according to the browser ]
 	 */
 	(function() {
 		var v = navigator.userAgent;
@@ -306,10 +306,10 @@
 	})();
 
 	/**
-	 * 瀑布流插件入口
-	 * @param { object[ {line}, {gap}, {width} ] } option      [ line: 瀑布流列数 | gap: 瀑布流间距 | width: 瀑布流宽度 ]
-	 * 	      { string } option  [ "add", "remove" ]           [ "add": 第二个参数为图片路径(必须), 第三个参数为主标题, 第四个参数为副标题]
-	 * 	                                                       [ "remove": 第二个参数为删除图片的序号( 为空时清空图片 ) ]
+	 * Waterfall stream plugin entrance 
+	 * @param { object[ {line}, {gap}, {width} ] } option      [ line: Number of waterfalls  | gap: Waterfall spacing  | width: Waterfall width  ]
+	 * 	      { string } option  [ "add", "remove" ]           [ "add": The second parameter is the image path (required), the third parameter is the main title, and the fourth parameter is the subtitle ]
+	 * 	                                                       [ "remove": The second parameter is the serial number of the deleted picture (clear the picture when it is empty)  ]
 	 */
 	$.fn.pinterest = function(option) {
 		var config = option ? option : {};

@@ -1,0 +1,22 @@
+.slideshow-container{
+    position: relative;
+    height: 250px;
+}
+
+.mySlides {
+    display: flex;
+}
+
+.mySlides img{
+    margin: 10px;
+    width:23%;
+    max-height:15%;
+    border-radius: 10px;
+    height: auto;
+    vertical-align: middle;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.65);
+}
+
+.mySlides > img:not(:last-child) {
+ margin-right: 1,2%;
+}
