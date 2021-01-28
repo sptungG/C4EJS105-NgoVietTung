@@ -35,6 +35,12 @@ hr{
 .menu img:hover{
  opacity: 0.75;
 }
+
+.menu button{
+    padding: 8px;
+    border-radius: 8px;
+    width: 100%;
+}
 .menu a, h2{
     font-family: "Lobster", cursive;
     font-weight: lighter;
