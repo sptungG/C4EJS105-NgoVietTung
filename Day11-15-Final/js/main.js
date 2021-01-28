@@ -39,6 +39,7 @@ function topFunction() {
 }
 
 /*======================== SIGN IN / UP ========================*/
+
 window.onload = function() {
   navigator.id.watch({
     loggedInUser: null,
