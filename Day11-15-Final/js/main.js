@@ -1,31 +1,4 @@
 
-/*======================== SLIDES ========================*/
-// var slideIndex = 1;
-// showSlides(slideIndex);
-
-// function plusSlides(n) {
-//   showSlides(slideIndex += n);
-// }
-
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
-
-// function showSlides(n) {
-//   var i;
-//   var slides = document.getElementsByClassName("mySlides");
-//   var dots = document.getElementsByClassName("dot");
-//   if (n > slides.length) {slideIndex = 1}    
-//   if (n < 1) {slideIndex = slides.length}
-//   for (i = 0; i < slides.length; i++) {
-//       slides[i].style.display = "none";  
-//   }
-//   for (i = 0; i < dots.length; i++) {
-//       dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   slides[slideIndex-1].style.display = "block";  
-//   dots[slideIndex-1].className += " active";
-// }
 
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
@@ -46,26 +19,7 @@ toggle between hiding and showing the dropdown content */
 //       }
 //     }
 //   }
-// let z = document.getElementById('imgs');
-// let url = [
-//     'https://theme.hstatic.net/1000257596/1000329871/14/block_home_category2.jpg?v=82',
-//     'https://theme.hstatic.net/1000257596/1000329871/14/block_home_category1.jpg?v=82'
-// ]
 
-// let count=0;
-//         setInterval(() => {
-//             count++;
-//            if(count % 3 == 0){
-//             z.style.backgroundImage = "url(https://theme.hstatic.net/1000257596/1000329871/14/slideshow_3.jpg?v=82)"
-//            }
-//            else if(count % 3 == 1){
-//             z.style.backgroundImage = "url(https://theme.hstatic.net/1000257596/1000329871/14/slideshow_2.jpg?v=82)"
-//            }
-//            else{
-//             z.style.backgroundImage = "url(https://theme.hstatic.net/1000257596/1000329871/14/slideshow_1.jpg?v=82)"
-//            }
-            
-//         }, 5000);
 /*======================== TOP button ========================*/
 var mybutton = document.getElementById("myBtn");
 // When the user scrolls down 20px from the top of the document, show the button

@@ -11,6 +11,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
     <div class="container-menu">
         <div class="menu" align="center">
             <ul>
@@ -26,16 +28,17 @@
         </div>
     </div>
     <div class="container">
-        <div class="row text-center">
+        <div class="random-meal-container text-center">
             <h3>
-                Feeling hungry?
+                <i>Feeling hungry?</i>
             </h3>
-            <h5>Get a random meal by clicking below</h5>
+            <h4>Get a random meal by clicking below</h4>
             <button class="button-primary" id="get_meal">Get Meal 🍔</button>
     
         </div>
-        <div id="meal" class="row meal"></div>
+        <div id="meal" class="random-meal-container meal"></div>
     </div>
     <script src='js/randomdish.js'></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -22,33 +22,37 @@ const createMeal = (meal) => {
 	}
 	
 	const newInnerHTML = `
-		<div class="row">
-			<div class="columns five">
-                <img src="${meal.strMealThumb}" alt="Meal Image">
-                <div class="recipes">
-				${meal.strCategory ? `<p><strong>Category:</strong> ${meal.strCategory}</p>` : ''}
-				${meal.strArea ? `<p><strong>Area:</strong> ${meal.strArea}</p>` : ''}
-				${meal.strTags ? `<p><strong>Tags:</strong> ${meal.strTags.split(',').join(', ')}</p>` : ''}
-				<h5>Ingredients:</h5>
-				<ul>
+		<div class="random-meal-container" >
+			<div class="random-meal-main" style = "display: flex;" >
+			    <div>	
+			       <img src="${meal.strMealThumb}" alt="Meal Image">
+			    </div>
+				<div class="recipes">
+				<br>
+				     ${meal.strCategory ? `<p><strong><i>Category:</i></strong> ${meal.strCategory}</p>` : ''}
+				     ${meal.strArea ? `<p><i class="fa fa-map-o" aria-hidden="true"></i> <strong><i>Area:</i></strong> ${meal.strArea}</p>` : ''}
+				     ${meal.strTags ? `<p><i class="fa fa-tags" aria-hidden="true"></i> <strong><i>Tags:</i></strong> ${meal.strTags.split(',').join(', ')}</p>` : ''}
+				  <h4><i class="fa fa-road" aria-hidden="true"></i> <i>Ingredients:</i></h4>
+				   <ul>
 					${ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
-                </ul>
-                </div>
+                   </ul>
+				</div>
+			   <div class="recipes-instructions">
+				 <h4><i class="fa fa-delicious" aria-hidden="true"> </i>${meal.strMeal}</h4>
+				 <p>${meal.strInstructions}</p>
+			    </div>
 			</div>
-			<div class="columns seven">
-				<h4>${meal.strMeal}</h4>
-				<p>${meal.strInstructions}</p>
-			</div>
-		</div>
+		</div>	
 		${meal.strYoutube ? `
-		<div class="row">
-			<h5>Video Recipe</h5>
-			<div class="videoWrapper">
+		<div class="random-meal-container">
+			<h4 style = "text-indent: 20px;"><i class="fa fa-youtube-play" aria-hidden="true"></i> <i>Video Recipe.</i></h4>
+			 <div class="videoWrapper">
 				<iframe width="420" height="315"
 				src="https://www.youtube.com/embed/${meal.strYoutube.slice(-11)}">
 				</iframe>
-			</div>
+			 </div>
 		</div>` : ''}
+
 	`;
 	
 	meal_container.innerHTML = newInnerHTML;

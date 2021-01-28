@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 .container {
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 	color:#ffffff;
 }
@@ -15,22 +17,26 @@
 }
 
 .container img {
-    height: 400px;
-	width: 45%;
+	border-radius: 15px;
+	margin: 0 20px;
+	width: 80%;
 }
 .recipes{
     height: auto;
     width: 50%;
 }
 .container p {
+	text-indent: 20px;
 	margin-bottom: 5px;
 }
 
 .container h3 {
+	font-size: 35px;
 	margin: 0;
 }
 
-.container h5 {
+.container h4 {
+	font-size: 25px;
 	margin: 10px 0;
 }
 
@@ -38,6 +44,9 @@
 	margin-bottom: 0;
 }
 
+.recipes-instructions{
+	width: 80%;
+}
 .meal {
 	margin: 20px 0;
 }
@@ -62,10 +71,12 @@
 	color: brown;
 }
 .videoWrapper {
+	margin: 0 20px;
 	position: relative;
 	padding-bottom: 56.25%;
 	padding-top: 25px;
 	height: 0;
+	border-radius: 15px;
 }
 
 .videoWrapper iframe {
