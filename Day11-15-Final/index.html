@@ -27,9 +27,10 @@
 			<a href="index.html" title="HOME"><img src="images/logo.jpg" alt=""></a>
             <li><a href="randomdish.html" title="Get a random Meal.">Hungry?</a></li>
 			<li><a href="#">About Us</a></li>
-			
-			<li><button><a href="#" style="float: right;" id="sign-in">Sign in</a></button></li>
-			<li><button><a href="#" style="float: right;" id="sign-up">Sign up</a></button></li>
+		<div class="menu-login">
+			<li><button><a href="#" id="sign-in">Sign in</a></button></li>
+			<li><button><a href="#" id="sign-up">Sign up</a></button></li>
+		</div>	
 		</ul>
 		<hr width="100%" size="1px" align="center" />
 	</div>
@@ -89,28 +90,6 @@
 	<span class="dot"></span>
 	<span class="dot"></span> 
   </div>
-<script>
-	/*======================== SLIDE ========================*/
-	var slideIndex = 0;
-	showSlides();
-	
-	function showSlides() {
-	   var i;
-	   var slides = document.getElementsByClassName("mySlides");
-	   var dots = document.getElementsByClassName("dot");
-	   for (i = 0; i < slides.length; i++) {
-		 slides[i].style.display = "none";  
-	   }
-	   slideIndex++;
-	   if (slideIndex > slides.length) {slideIndex = 1}    
-	   for (i = 0; i < dots.length; i++) {
-		  dots[i].className = dots[i].className.replace(" active", "");
-	   }
-	   slides[slideIndex-1].style.display = "block";  
-	   dots[slideIndex-1].className += " active";
-	   setTimeout(showSlides, 4000); // Change image every 2 seconds
-	}
-	</script>
 
 <div> <h2 align = "center" style="width: 75%; font-size: 30px;"> - Dish we offer - </h2> </div>
 <!-- ======================== BLOG ======================== -->

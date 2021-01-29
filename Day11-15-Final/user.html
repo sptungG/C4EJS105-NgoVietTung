@@ -3,14 +3,127 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>User</title>
+    <title>Your personal in4</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/user.css'>
+    <link rel="stylesheet" href="css/blog-main.css">
+  	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Lobster&display=swap" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
 </head>
 <body>
-    <div class="personal">
+  <div class="container-menu">
+    <div class="menu" align="center">
+          <ul>
+              <li><a href="index.html" title="HOME"><i class="fa fa-fw fa-home"></i>Home</a></li>
+              <li><a href="#">VietNamese</a></li>
+        <li><a href="#">Chinese</a></li>
+        <li><a href="#">ThaiLand</a></li>
+        <a href="index.html" title="HOME"><img src="images/logo.jpg" alt=""></a>
+              <li><a href="randomdish.html" title="Get a random Meal.">Hungry?</a></li>
+        <li><a href="#">About Us</a></li>
 
+      <div class="menu-login">
+      <li><div id="profile-img" class="profile-img">
+          <img  src="images/4.jpg"  alt="Profile Image">
+        </div></li>
+      </div>	
+      
+    </ul>
+      <hr width="100%" size="1px" align="center" />
+    </div>
+  </div>
+    <div class="container-user">
+        <div class="profile-header">
+          <div class="profile-img">
+            <img src="images/4.jpg" width="200" alt="Profile Image">
+          </div>
+          <div class="profile-nav-info">
+            <h3 class="user-name">Your Name</h3>
+            <div class="address">
+              <p id="state" class="state">HaNoi,</p>
+              <span id="country" class="country">Viet Nam.</span>
+            </div>
+      
+          </div>
+          <div class="profile-option">
+            <div class="notification">
+              <i class="fa fa-delicious" aria-hidden="true"></i>
+              <span class="alert-message">0</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="main-bd">
+          <div class="left-side">
+            <div class="profile-side">
+              <p class="mobile-no"><i class="fa fa-phone"></i> +23470xxxxx700</p>
+              <p class="user-mail"><i class="fa fa-envelope"></i> Brightisaac80@gmail.com</p>
+              <!-- <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-instagram"></a> -->
+              <div class="user-bio">
+
+                <h3>Bio</h3>
+                <p class="bio" id="bio">
+                 Add your bio?
+                </p>
+
+              </div>
+              <div class="profile-btn">
+                <button class="createbtn" id="Create-post"> <i class="fa fa-plus-circle" aria-hidden="true"></i> Create Meal</button>
+              </div>
+
+            </div>
+      
+          </div>
+          <div class="right-side">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            
+            <figure class="tabBlock">
+
+              <ul class="tabBlock-tabs">
+                <li class="tabBlock-tab is-active"><i class="fa fa-delicious" aria-hidden="true"></i> Your Meal</li>
+                <li class="tabBlock-tab"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Activities</li>
+                <li class="tabBlock-tab"><i class="fa fa-star-o" aria-hidden="true"></i> Favorite</li>
+              </ul>
+
+              <div class="tabBlock-content">
+                <div class="tabBlock-pane">
+                  <ul>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Minima mollitia tenetur nesciunt modi?</li>
+                    <li>Id sint fugit et sapiente.</li>
+                    <li>Nam deleniti libero obcaecati pariatur.</li>
+                    <li>Nemo optio iste labore similique?</li>
+                  </ul>
+                </div>
+              
+                <div class="tabBlock-pane" >
+                  <ul>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Minima mollitia tenetur nesciunt modi?</li>
+                    <li>Id sint fugit et sapiente.</li>
+                    <li>Nam deleniti libero obcaecati pariatur.</li>
+                    <li>Nemo optio iste labore similique?</li>
+                  </ul>
+                </div>
+
+                <div class="tabBlock-pane" >
+                  <ul>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Minima mollitia tenetur nesciunt modi?</li>
+                    <li>Id sint fugit et sapiente.</li>
+                    <li>Nam deleniti libero obcaecati pariatur.</li>
+                    <li>Nemo optio iste labore similique?</li>
+                  </ul>
+                </div>
+              
+              </div>
+
+            </figure>
+      
+            </div>
+        </div>
     </div>
     <script src='js/user.js'></script>
 </body>

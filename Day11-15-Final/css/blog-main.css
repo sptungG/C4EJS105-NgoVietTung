@@ -48,7 +48,7 @@ hr{
     text-transform: initial;
     font-size: 25px;
     color:gold;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.65);;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.65);
 }
 .menu a:hover, a:hover p{
     color: #adad90;
@@ -58,7 +58,16 @@ display: inline-flex;
 justify-content: center;
 padding: 10px 20px;
 }
-
+.menu-login {
+    align-items: center;
+    vertical-align: middle;
+    float: right;
+    display: flex;
+}
+.menu-login button{
+    margin: 0 !important;
+    padding: 2px !important;
+}
 /*======================== TOP button ========================*/
 #myBtn {
     display: none;

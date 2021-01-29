@@ -18,15 +18,9 @@
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.65);
 }
 
-.mySlides > img:not(:last-child) {
- margin-right: 1,2%;
-}
 
-/* @media screen and (max-width: 576px) {
-.mySlides img{
+@media screen and (max-width: 1166px) {
+.mySlides > a:last-child{
     display: none;
 }
-.mySlides{
-    display: none;
 }
-} */
