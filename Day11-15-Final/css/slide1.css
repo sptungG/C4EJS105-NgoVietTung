@@ -1,7 +1,7 @@
 /*======================== SLIDE ========================*/
 .slideshow-container{
     position: relative;
-    height: 250px;
+    height: auto;
 }
 
 .mySlides {
@@ -10,10 +10,9 @@
 
 .mySlides img{
     margin: 10px;
-    width:23%;
-    max-height:15%;
+    width: 95%;
+    max-height: 60%;    
     border-radius: 10px;
-    height: 220px;
     vertical-align: middle;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.65);
 }
