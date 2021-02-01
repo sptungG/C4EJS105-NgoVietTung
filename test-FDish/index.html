@@ -5,7 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Fine Dish</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Lobster&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -14,25 +14,29 @@
   <header>
     <div class="header-menu-position">
         <nav class="left-menu"> 
-            <a href="#">Home</a>
-            <a href="#">Categories</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            <a href="#">All themes</a>
+          <a href="index.html" title="HOME"><img src="images/logo.jpg" alt=""></a>
+          <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+          <a href="#">VietNamese</a>
+          <a href="randomdish.html" title="Get a random Meal.">Hungry?</a>
+          <a href="#">About Us</a>
         </nav>
 
         <nav class="left-menu-hamburger">
-            <a href="#"><i class="fa fa-bars" aria-hidden="true" style="size: 25px;"></i></a>
+            <button href="#" id="left-menu-res"><a>☰</a></button>
         </nav>
 
         <div class="right-menu">
-					<a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></i></a>
+          <button href="#" id="sign-in" class="sign-in"><a> Sign in</a></button>
+          <button href="#" id="sign-up" class="sign-up"><a> Sign up</a></button>
+          <a style="font-size: 25px; margin: 0 !important;"> | </a>
+					<a href="#"><i class="fa fa-facebook-official" aria-hidden="true" style="color: blue;"></i></a>
+					<a href="#"><i class="fa fa-instagram" aria-hidden="true" style="color: deeppink;"></i></a>
+					<a href="#"><i class="fa fa-pinterest" aria-hidden="true" style="color: red;"></i></a>
+					<a href="#"><i class="fa fa-twitter" aria-hidden="true" style="color: aqua;"></i></i></a>
         </div>
     </div>
 </header>
+
 <main>
 <div class="grid">
 
@@ -130,6 +134,7 @@
             </div>
           </div>
         </div>
+
         <div class="item blog">
           <div class="content">
             <div class="title">
@@ -264,7 +269,6 @@
           </div>
         </div>
 
-
         <div class="item blog">
           <div class="content">
             <div class="title">
@@ -317,7 +321,7 @@
             </div>
           </div>
           
-          <div class="item blog">
+          <div class="item blog"> 
             <div class="content">
               <div class="title">
                 <h3> Menu </h3>
@@ -330,6 +334,7 @@
               </div>
             </div>
           </div>
+ 
 </div>
 </main>  
 
@@ -360,6 +365,6 @@
         }
       </script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>  
-    <script src='main.js'></script>
+    <script src='js/main.js'></script>
 </body>
 </html>

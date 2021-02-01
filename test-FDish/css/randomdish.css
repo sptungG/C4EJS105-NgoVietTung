@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+.container {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color:#ffffff;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 0;
+	min-height: 100vh;
+}
+
+.container img {
+	border-radius: 15px;
+	margin: 0 20px;
+	width: 80%;
+}
+.recipes{
+    height: auto;
+    width: 50%;
+}
+.container p {
+	text-indent: 20px;
+	margin-bottom: 5px;
+}
+
+.container h3 , h3 i{
+	font-size: 35px !important;
+	margin: 0;
+}
+
+.container h4 {
+    font-family: "Lobster", cursive;
+    font-weight: lighter;
+    text-decoration: none;
+    text-transform: initial;
+	font-size: 25px !important;
+	margin: 10px 0;
+}
+
+.container li {
+	margin-bottom: 0;
+}
+
+.recipes-instructions{
+	width: 80%;
+}
+.meal {
+	margin: 20px 0;
+}
+
+.text-center {
+	text-align: center;
+}
+.container .button-primary{
+        padding: 15px 55px;
+        background-color: #ffffff;
+        border-radius: 30px;
+        color: black;
+        font-size: 18px;
+        text-transform: initial;
+        cursor: pointer;
+        border: none;
+        margin-top: 20px;
+}
+
+.fa-youtube-play{
+    color: red;
+}
+.container .button-primary:hover {
+	background-color: #ffffff;
+	color: brown;
+}
+.videoWrapper {
+	margin: 0 20px;
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0;
+	border-radius: 15px;
+}
+
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 50%;
+}
