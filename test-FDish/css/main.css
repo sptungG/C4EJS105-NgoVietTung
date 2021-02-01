@@ -31,8 +31,9 @@ nav.left-menu {
   text-decoration: none;
   text-transform: initial !important;
   font-size: 25px !important;
+  color: #ffffff !important;
 }
-/*  */
+/* ===================== ===================== */
 .left-menu-hamburger button{
   display: none;  
 }
@@ -50,7 +51,7 @@ nav.left-menu {
 .left-menu-hamburger button:hover{
   text-shadow: 0 0 15px #ffffff;
 }
-/*  */
+/* ===================== ===================== */
 .right-menu {
   display: flex;
   flex: 1;
@@ -131,7 +132,7 @@ nav.left-menu {
 }
 
 /* Non-grid specific CSS */  
-body .grid{
+ .grid{
   margin: 10px;
 	color: #374046;
 	background-color: black;
