@@ -1,3 +1,4 @@
+/*======================== GRID ========================*/
 function resizeGridItem(item){
     grid = document.getElementsByClassName("grid")[0];
     rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
