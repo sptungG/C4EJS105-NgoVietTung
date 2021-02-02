@@ -21,8 +21,16 @@
               <a href="#" title="#About Us">About Us</a>
             </nav>
     
-            <nav class="left-menu-hamburger">
-                <button href="#" id="left-menu-res"><a>☰</a></button>
+            <nav class="left-menu-hamburger" >
+              <button href="#" title="MENU" class="icon" onclick="dropDownMenu()"><a>☰</a></button>
+             
+              <ul id="drop-down-content" class="drop-down-content">
+                <li><a href="index.html" title="HOME"><img src="images/logo.jpg" alt=""></a></li>
+                  <li><a href="index.html" title="HOME"><i class="fa fa-fw fa-home"></i> Home</a></li>
+                  <li><a href="#">VietNamese</a></li>
+                  <li><a href="randomdish.html" title="Get a random Meal.">Hungry?</a></li>
+                  <li><a href="#" title="#About Us">About Us</a></li>
+              </ul>
             </nav>
     
             <div class="right-menu">
@@ -35,6 +43,19 @@
                         <a href="#"><i class="fa fa-twitter" aria-hidden="true" style="color: aqua;"></i></i></a>
             </div>
         </div>
+    
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function dropDownMenu() {
+      var x = document.getElementById("drop-down-content");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
     </header>
 
     <div class="container">
