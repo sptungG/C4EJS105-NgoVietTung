@@ -91,8 +91,6 @@ nav.left-menu {
   border-radius: 5px 5px 0 0;
 }
 
-
-
 /* ===================== ===================== */
 .right-menu {
   display: flex;
@@ -241,7 +239,7 @@ i{
   text-indent: 5px;
   margin-bottom: 10px; 
 }
-
+/* ========================= RESP ========================= */
 @media screen and (max-width: 800px) {
   nav.left-menu {
       display: none;
