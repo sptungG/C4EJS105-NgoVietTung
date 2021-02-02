@@ -11,52 +11,51 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header>
-        <div class="header-menu-position">
-            <nav class="left-menu"> 
-              <a href="index.html" title="HOME"><img src="images/logo.jpg" alt=""></a>
-              <a href="index.html" title="HOME"><i class="fa fa-fw fa-home"></i> Home</a>
-              <a href="#">VietNamese</a>
-              <a href="randomdish.html" title="Get a random Meal.">Hungry?</a>
-              <a href="#" title="#About Us">About Us</a>
-            </nav>
-    
-            <nav class="left-menu-hamburger" >
-              <button href="#" title="MENU" class="icon" onclick="dropDownMenu()"><a>☰</a></button>
-             
-              <ul id="drop-down-content" class="drop-down-content">
-                <li><a href="index.html" title="HOME"><img src="images/logo.jpg" alt=""></a></li>
-                  <li><a href="index.html" title="HOME"><i class="fa fa-fw fa-home"></i> Home</a></li>
-                  <li><a href="#">VietNamese</a></li>
-                  <li><a href="randomdish.html" title="Get a random Meal.">Hungry?</a></li>
-                  <li><a href="#" title="#About Us">About Us</a></li>
-              </ul>
-            </nav>
-    
-            <div class="right-menu">
-              <button href="#" id="sign-in" class="sign-in"><a> Sign in</a></button>
-              <button href="#" id="sign-up" class="sign-up"><a> Sign up</a></button>
-              <a style="font-size: 25px; margin: 0 !important;"> | </a>
-                        <a href="#"><i class="fa fa-facebook-official" aria-hidden="true" style="color: blue;"></i></a>
-                        <a href="#"><i class="fa fa-instagram" aria-hidden="true" style="color: deeppink;"></i></a>
-                        <a href="#"><i class="fa fa-pinterest" aria-hidden="true" style="color: red;"></i></a>
-                        <a href="#"><i class="fa fa-twitter" aria-hidden="true" style="color: aqua;"></i></i></a>
-            </div>
+  <header>
+    <div class="header-menu-position">
+        <nav class="left-menu"> 
+          <a href="index.html" title="HOME"><img src="images/logo.jpg" alt=""></a>
+          <a href="index.html" title="HOME"><i class="fa fa-fw fa-home"></i> Home</a>
+          <a href="#">VietNamese</a>
+          <a href="randomdish.html" title="Get a random Meal.">Hungry?</a>
+          <a href="#" title="#About Us">About Us</a>
+        </nav>
+
+        <nav class="left-menu-hamburger" >
+          <button href="#" title="MENU" class="icon" onclick="dropDownMenu()"><a>☰</a></button>       
+          <ul id="drop-down-content" class="drop-down-content">
+            <li><a href="index.html" title="HOME"><img src="images/logo.jpg" alt=""></a></li>
+              <li><a href="index.html" title="HOME"><i class="fa fa-fw fa-home"></i> Home</a></li>
+              <li><a href="#">VietNamese</a></li>
+              <li><a href="randomdish.html" title="Get a random Meal.">Hungry?</a></li>
+              <li><a href="#" title="#About Us">About Us</a></li>
+          </ul>
+        </nav>
+
+        <div class="right-menu">
+          <button href="#" title="Join us now" id="sign-in" class="sign-in"><a> Sign in</a></button>
+          <button href="#" title="Join us now" id="sign-up" class="sign-up"><a> Sign up</a></button>
+          <a style="font-size: 25px; margin: 0 !important; color: white;"> | </a>
+					<a href="#" title="Facebook"><i class="fa fa-facebook-official" aria-hidden="true" style="color: blue;"></i></a>
+					<a href="#" title="Instagram"><i class="fa fa-instagram" aria-hidden="true" style="color: deeppink;"></i></a>
+					<a href="#" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true" style="color: red;"></i></a>
+					<a href="#" title="Twitter"><i class="fa fa-twitter" aria-hidden="true" style="color: aqua;"></i></i></a>
         </div>
-    
-    <script>
-    /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
-    function dropDownMenu() {
-      var x = document.getElementById("drop-down-content");
+    </div>
+
+  <script>
+  /* When the user clicks on the button, 
+   toggle between hiding and showing the dropdown content */
+   function dropDownMenu() {
+    var x = document.getElementById("drop-down-content");
       if (x.style.display === "block") {
-        x.style.display = "none";
+          x.style.display = "none";
       } else {
-        x.style.display = "block";
+          x.style.display = "block";
       }
-    }
-    </script>
-    </header>
+   }
+  </script>
+</header>
 
     <div class="container">
         <div class="random-meal-container text-center">

@@ -29,3 +29,10 @@ function resizeGridItem(item){
 
 /*======================== TOP button ========================*/
 /*======================== DropDown Menu ========================*/
+/*======================== Popup Blog ========================*/
+function openForm() {
+  document.getElementById("myBlog").style.display = "block";
+}
+function closeForm() {
+  document.getElementById("myBlog").style.display = "none";
+}
