@@ -37,11 +37,13 @@ nav.left-menu {
 /* ===================== ===================== */
 .left-menu-hamburger button{
   display: none;  
-  padding: 8px 15px;
+  padding: 13px 20px;
   border: none;
   border-radius: 8px;
   position: fixed;
+  top: 5px;
   margin-left: 5px;
+
 }
 .left-menu-hamburger button{
   color: #ffffff;
@@ -58,9 +60,7 @@ nav.left-menu {
 .left-menu-hamburger{
   overflow: visible;
   position: absolute;
-  min-height: 200px;
-  min-width: 120px;
-  margin-top: 160px;
+  display: none;
 }
 
 .left-menu-hamburger #drop-down-content{
@@ -68,19 +68,22 @@ nav.left-menu {
   position: fixed;
    top: 60px;
    left: 10px;
+   width: 200px;
 }
 .left-menu-hamburger li{
   display: none;
   box-sizing: border-box;
-  padding: 5px 10px;
   background-color: #374046;
 }
 
 .left-menu-hamburger a{
   display: none;
+  text-align: center;
   font-size: 20px;
 }
-
+.drop-down-content a{
+  padding: 15px 0;
+}
 .left-menu-hamburger li:last-child{
   border-radius: 0 0 5px 5px;
 }
@@ -247,11 +250,10 @@ i{
       display: block;
   }
   .left-menu-hamburger ,.left-menu-hamburger li{
-    position: relative;
     display: block;
   }
   .left-menu-hamburger #drop-down-content{
-    display: block;
+    display: none;
   }
   .left-menu-hamburger a{
     display: block;
