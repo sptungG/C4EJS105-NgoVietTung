@@ -12,11 +12,11 @@ body{
   height: 70px;
   align-items: center;
 }
-.left-menu img{
+header img{
   width: 100px;
   margin: 0 5px -10px;
 }
-.left-menu img:hover{
+header img:hover{
 opacity: 0.75;
 }
 
@@ -25,32 +25,71 @@ nav.left-menu {
   flex: 1;
   justify-content: space-around;   
 }
-.left-menu a{
+.left-menu a,.left-menu-hamburger a{
   font-family: "Lobster", cursive;
   font-weight: lighter;
   text-decoration: none;
-  text-transform: initial !important;
-  font-size: 25px !important;
-  color: #ffffff !important;
+  text-transform: initial;
+  font-size: 25px;
+  color: #ffffff;
+  align-self: center;
 }
 /* ===================== ===================== */
 .left-menu-hamburger button{
   display: none;  
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  position: fixed;
+  margin-left: 5px;
 }
 .left-menu-hamburger button{
-  padding: 8px 15px;
   color: #ffffff;
   background-color: #374046;
   font-weight: lighter;
   text-decoration: none;
   text-transform: initial;
   font-size: 25px;
-  border: none;
-  border-radius: 8px;
 }
-.left-menu-hamburger button:hover{
+.left-menu-hamburger button:hover, .left-menu-hamburger a:hover{
   text-shadow: 0 0 15px #ffffff;
 }
+
+.left-menu-hamburger{
+  overflow: visible;
+  position: absolute;
+  min-height: 200px;
+  min-width: 120px;
+  margin-top: 160px;
+}
+
+.left-menu-hamburger #drop-down-content{
+  display: none;
+  position: fixed;
+   top: 60px;
+   left: 10px;
+}
+.left-menu-hamburger li{
+  display: none;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  background-color: #374046;
+}
+
+.left-menu-hamburger a{
+  display: none;
+  font-size: 20px;
+}
+
+.left-menu-hamburger li:last-child{
+  border-radius: 0 0 5px 5px;
+}
+.left-menu-hamburger li:first-child{
+  border-radius: 5px 5px 0 0;
+}
+
+
+
 /* ===================== ===================== */
 .right-menu {
   display: flex;
@@ -90,14 +129,7 @@ nav.left-menu {
   text-shadow: 0 0 15px #ffffff;
 }
 
-.left-menu a {
-  text-decoration: none;
-  color: #787878;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 15px;
-  align-self: center;
-}
+
 /*======================== TOP button ========================*/
 #myBtn {
   display: none;
@@ -214,9 +246,19 @@ i{
   .left-menu-hamburger button{
       display: block;
   }
-  
+  .left-menu-hamburger ,.left-menu-hamburger li{
+    position: relative;
+    display: block;
+  }
+  .left-menu-hamburger #drop-down-content{
+    display: block;
+  }
+  .left-menu-hamburger a{
+    display: block;
+  }
   .right-menu button{
     padding: 1px !important;
     margin: 0 1px !important;
   }
+
   }
