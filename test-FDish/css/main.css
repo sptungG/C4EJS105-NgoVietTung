@@ -3,7 +3,11 @@
   margin: 0;
 }
 body{
-  background-color: var(--backg-color);
+  background-image: url("https://francarstens.github.io/weAreCooking--HTML/images/body_background.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  zoom: 1;
 }
 :root{
   --font-main: "Lobster", cursive;
@@ -13,6 +17,9 @@ body{
   --backg-color-item: #ffffff;
   --color-font-blog: #374046;
 }
+html {
+  scroll-behavior: smooth;
+}
 /* var(); */
 /* ========================= MENU ========================= */
 .header-menu-position {
@@ -20,6 +27,7 @@ body{
   flex-direction: row;
   height: 70px;
   align-items: center;
+  z-index: 5002;
 }
 header img{
   width: 100px;
@@ -100,8 +108,6 @@ nav.left-menu {
   border-radius: 5px 5px 0 0;
 }
 
-
-
 /* ===================== ===================== */
 .right-menu {
   display: flex;
@@ -118,9 +124,14 @@ nav.left-menu {
 }
 .sign-in{
   background-color: red;
-}
-.sign-in a{
   color:#ffffff !important;
+}
+.sign-in a,.sign-up a{
+  font-family: var(--font-main) !important;
+  font-weight: lighter;
+  text-decoration: none;
+  text-transform: initial;
+  font-size: 25px;
 }
 .right-menu a {
   padding: 7px;
@@ -169,6 +180,8 @@ nav.left-menu {
   background-color: #555;
 }
 /* ========================= GRID BLOG ========================= */
+/* ========================= GRID BLOG ========================= */
+
 .grid {
   display: grid;
   grid-gap: 10px;
@@ -178,12 +191,29 @@ nav.left-menu {
 
 /* Non-grid specific CSS */  
  .grid{
-  margin: 10px;
+  margin: 5px 0 !important;
 	color: var(--color-font-blog);
-	background-color: var(--backg-color);
 	font-size: 1.15em;
+  background-color: rgba(161, 161, 161, 0.116);
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
+}
+.section-subtitle{
+  font-family: var(--font-blog);
+  letter-spacing: 2px;
+  font-style: italic;
+  font-weight: bolder;
+
+  font-size: 1.3em;
+  text-align: initial;
+  text-shadow: 0 0 3px #ffffff;
+  margin-left: 20px;
+}
+.section-title{
+  font-family: var(--font-main);
+  color: #fff;
+  font-size: 2em;
+  margin-left: 20px;
 }
 .item {
   background-color: var(--backg-color-item);
@@ -316,15 +346,15 @@ i{
     right: 0;
     border-radius: 8px 0 0 8px;
   }
-  #btn_prev, #btn_next {
+  main #btn_prev, main #btn_next {
     padding: 20px 15px;
     font-size: 25px;
     display: inline-block;
     border: none;
     user-select: none;
-
+    cursor: pointer;
     position: fixed;
-    top: 50%;
+    top: 70%;
     z-index: 400;
     background-color: rgba(126, 126, 126, 0.411);
     color: black;
@@ -354,7 +384,7 @@ i{
         min-height: 80%;
         align-items: center;
         justify-content: flex-end;
-        margin-top: 80px;
+        margin: 80px 0 0 0;
   }
   .img-search{
     width: 100px;
@@ -821,3 +851,13 @@ i{
   background-color: rgba(255, 0, 0, 0.911);
 
 }
+/*====================  ====================*/
+/*========== FOOTER ==========*/
+/* footer .copyright-part {
+  font-size: 12px;
+}
+@media screen and (max-width: 800px) {
+  footer {
+    margin: 0 15px;
+}
+} */
