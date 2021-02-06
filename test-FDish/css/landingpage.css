@@ -61,17 +61,19 @@
     left: 0;
     width: 100%;
     height:  100%;
+    z-index: var(--z-fixed-mid-1); 
+ 
     object-fit: cover;
     border-radius: 10% 5%;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
-    opacity: 0;
-    transition: 0.5s;
-    background-position: center;
-    z-index: var(--z-fixed-mid-1); 
+    display: none;
+    transition: 0.5s; 
 }
-.banner .imgBx img.active{
-    opacity: 1;
+.imgBx img.active{
+    display: block !important;
+    opacity: 1 !important;
 }
+
 /*==================== BUTTON PREV_NEXT SLIDE ====================*/
 .controls{
     position: absolute;
@@ -112,7 +114,7 @@
     display: none;
 }
 .contentBx div.active{
-    display: block;
+    display: block !important;
     padding-left: 30px;
     padding-right: 100px;
     border-radius: 0 8px 8px 0;
@@ -144,6 +146,7 @@
 .contentBx div a:hover{
     background-color: rgba(122, 122, 122, 0.767);
     transition: 0.5s;
+    text-shadow: 0 0 3px #ffffff;
     transform: translateY(5px);
 }
 /*==================== ABOUT US ====================*/
@@ -221,7 +224,8 @@ i2{
     cursor: pointer;
     font-size: 1.1em;
     display: inline-block;
-    padding: 10px 30px;
+    padding:  10px;
+    text-align: center;
     background: #fff;
     color: #111;
     margin-top: 10px;
@@ -235,6 +239,20 @@ i2{
 .about-data a:hover{
     background-color: rgba(122, 122, 122, 0.767);
     transition: 0.5s;
-    transform: translateY(-5px);
+    text-shadow: 0 0 3px #ffffff;
+    transform: translateY(5px);
 }
 /*====================  ====================*/
+@media screen and (max-width: 800px) {
+    .about-img {
+      margin: 0;
+      padding: 0;
+      max-width: 50%;
+    }
+    .about-container img{
+        max-width: 45%;
+    }
+    .about-data{
+        padding-left: 3%;
+    }
+}
