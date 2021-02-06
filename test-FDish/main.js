@@ -94,7 +94,7 @@ duration: 2000,
 reset: true,
 });
 sr.reveal(`
-        .about-data, .about-img,.grid
+        .about-data, .about-img,.grid 
 `, {
 interval: 200
 });
